@@ -1,0 +1,84 @@
+Step 1 Passed
+HTML elements have opening tags like "<h1>"" and closing tags like "</h1>".
+Find the h1 element and change its text to:
+"CatPhotoApp" 
+Make sure that the text is between its opening and closing tags.
+
+Step 2 Passed 
+The "h1" to "h6" heading elements are used to signify the importance of
+content below them. The lower the number, the higher the importance,
+so h2 elements have less importance than h1 elements. Only use one
+h1 element per page and place lower importance headings below
+higher importance headings.
+Below the "h1" element, add an h2 element with this text:
+"Cat Photos"
+
+Step 3 Passed 
+The "p" element is used to create a paragraph of text on websites. 
+Create a "p" element below your "h2" element and give it the following text:
+"Click here to view more cat photos" 
+
+Step 4 Passed 
+Commenting allows you to leave messages whitout affecting the browser display.
+It also allows you to make code inactive. A comment in HTML starts with "<  --", 
+contains any number of lines of text, and ends whith "-- >".
+For example: "< ! -- TODO : Remove h1 -- >"
+Contains the text: "TODO : Remove h1"
+Add a comment above the "p" element with this text:
+"TODO : Add a link to cat photos"
+
+Step 5 Passed 
+HTML5 has some elements that identify some different content areas.
+These elements make your HTML more easier to read and helps with Search Engine Optimization (SEO) 
+and accesibility. 
+Identify the main section of this page by adding a "< main >" opening tag after the "h1" element
+and a "< / main >" closing tag after the "p" element.
+
+Step 6 Passed 
+In the previous step, you nested the "h2" element, and "p" element within the "main" element.
+A nested element is a child of its parent element. It should be indented two more spaces 
+than its parent element to improve readability, like this:
+"< ul >
+   < li > Child Element 1 < li >
+   < li > Child Element 2 < li >
+ < / ul >"
+Add two spaces in front of the three child elementas of "main"  
+so your HTML is more readable. 
+
+Step 7 Passed 
+You can add images to your website by using the "img" element. "img" elements have an opening tag 
+without a closing tag. A tag for an element without a closing tag is known as "a self-closing tag". 
+Add an "img" element below the "p" element. At this point no image wil show up in the browser. 
+
+Step 8 Passed 
+HTML attributes are special words used inside the opening tag of an element to control the element's behavior.
+the "src" attribute in an "img" element specifies the image's URL (where the image is located). 
+An example of an "img" element using "src" attribute: < img src = "https://www.your-image-source.com/your-image.jpg">.
+Inside the existing "img" element, add an "src" attribute with this URL: 
+"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg".
+
+Step 9 Passed 
+All "img" elements shold have an "alt" attribute. 
+The "alt" attribute's text is used for screen readers to improve accessibility and is displayed
+if the image fails to load. For example, < img src="cat.jpg" alt"A cat"> has an "alt" attribute with the text "A cat"
+Inside the "img" element, add an "alt" attribute with this text: 
+"A cute orange cat lying on its back"
+
+Step 10 Passed 
+You can link another page with the anchor "a" element. 
+For example, "< a href='https//freecodecamp.org'>< a >"
+would link to "freecodecamp.org"
+Add an anchor element after the paragraph that links to
+"https://freecatphotoapp.com". At this point, the link won't show up in the preview.
+
+Step 11 Passed 
+A link's text must be placed between the opening and closing tag of an anachor element. 
+For example, "< a href='https://www.freecodecamp.org'> click here to go to FreeCodeCamp.org< / a >"
+is a link with the text "click here to go to FreeCodeCamp.org".
+Add the anchor text "cat photos" to the anchor element. This will become a link's text
+
+Step 12 Passed 
+Turn the words "cat photos" located inside "p" element into a link 
+using the same value for the href attribute as the link below the "p" element. 
+The "p" element should show the same text in the browser, but the words "cat photos" should now be a link. 
+Make sure to remove the "a" element with the text "cat photos" on the line below the "p" element. 
