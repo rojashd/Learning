@@ -208,3 +208,74 @@ Step 39
 "Placeholder text" is used to give people a hint about what kind of information to enter into an "input". 
 For example, <input type="text" placeholder="Email address">.
 Add the "placeholder text" cat photo URL to your "input" element.
+
+Step 40
+To prevent a user from submitting your form when required information is missing, 
+you need to add the required attribute to an "input" element. 
+There's no need to set a value to the required attribute. 
+Instead, just add the word "required" to the "input" element 
+making sure there is space between it and other attributes.
+
+Step 41
+Use the "button" element to create a clickable button. 
+For example, <button>Click Here</button> creates a button with the text Click Here.
+Add a "button" element with the text "Submit" below the "input" element. 
+The default behavior of clicking a form button without any attributes 
+submits the form to the location specified in the form's action attribute.
+
+Step 42
+Even though you added your "button" below the text "input", they appear next to each other on the page. 
+That's because both "input" and "button" elements are inline elements, which don't appear on new lines.
+You learned previously that the button submits the form by default, 
+but you can explicitly add the "type" attribute with the value "submit" to make it clearer. 
+Go ahead and do this to specify where this button should submit the form.
+
+Step 43
+You can use "radio buttons" for questions where you want only one answer out of multiple options.
+Here is an example of a radio button with the option of cat: <input type="radio"> cat. 
+Remember that input elements are self-closing.
+Before the text input, add a radio button with the option set as:
+"Indoor".
+
+Step 44
+"label" elements are used to help associate the text for an "input" element with the "input" element itself 
+(especially for assistive technologies like screen readers). 
+For example, <label><input type="radio"> cat</label> makes it so clicking the word cat 
+also selects the corresponding radio button.
+Nest your "radio button" inside a "label" element.
+
+Step 45
+The "id" attribute is used to identify specific HTML elements. 
+Each "id" attribute's value must be unique from all other "id" values for the entire page.
+Add an "id" attribute with the "value" indoor to the radio button. 
+When elements have multiple attributes, the order of the attributes doesn't matter.
+
+Step 46
+Nest another radio button with the option Outdoor in a new "label" element. 
+The new radio button should be placed after the first one. Also, set its "id" attribute value to:
+outdoor.
+
+Step 47
+Notice that both radio buttons can be selected at the same time. 
+To make it so selecting one radio button automatically deselects the other, 
+both buttons must have a "name" attribute with the same value.
+Add the "name" attribute with the value ""indoor-outdoor" to both radio buttons.
+
+Step 48
+If you select the Indoor radio button and submit the form, 
+the form data for the button is based on its "name" and value attributes. 
+Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, 
+which is not useful when you have multiple buttons.
+Add a value attribute to both radio buttons. 
+For convenience, set the button's "value" attribute to the same "value" as its "id" attribute.
+
+Step 49
+The "fieldset" element is used to group related inputs and labels together in a web form. 
+"fieldset" elements are block-level elements, meaning that they appear on a new line.
+Nest the Indoor and Outdoor radio buttons within a "fieldset" element, 
+and don't forget to indent the radio buttons.
+
+Step 50
+The "legend" element acts as a caption for the content in the "fieldset" element. 
+It gives users context about what they should enter into that part of the form.
+Add a "legend" element with the text "Is your cat an indoor or outdoor cat?" above both of the radio buttons.
