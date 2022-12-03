@@ -1,0 +1,42 @@
+"Usando JavaScript por primera vez"
+Todo código escrito en JavaScript debe estar dentro de 
+la etiqueta <script>. 
+Veamos un ejemplo que exhibe un alert en la pantalla:
+
+<meta charset="UTF-8">
+<h1>Usando JavaScript por primera vez</h1>
+<script>
+    alert("Este es un pop-up en JavaScript");
+</script>
+
+Esto está fuera de JavaScript...
+
+Piensa que todo lo que está entre <script>…</script>, 
+está en el mundo JavaScript. 
+Siendo así, el navegador interpretará ese trecho 
+como JavaScript. 
+Todo aquello que está escrito fuera de <script>…</script>, 
+es considerado mundo HTML y será interpretado como HTML.
+
+
+"Disciplina y Organización"
+Cuando comenzamos a programar, es común 
+tener una explosión de archivos 
+y cada archivo es equivalente a un programa. 
+Si guardamos cada archivo directamente en el escritorio, 
+tendremos todos ellos esparcidos y mal organizados. 
+¿Deseas perder ese código tan especial que creaste 
+porque eliminaste un archivo por error?
+
+Es por eso que una de las primeras actividades del curso 
+fue crear la carpeta "lógica", 
+la cual servirá para almacenar todos los archivos 
+que se crean durante el entrenamiento. 
+La programación necesita disciplina y organización.
+
+
+"Lo que aprendimos"
+Usar nuestro navegador para compilar nuestro código
+Usar Sublime o Notepad++ para escribir código
+Conceptos básicos de HTML: lenguaje de etiquetas
+A diferenciar el mundo HTML del mundo JavaScript

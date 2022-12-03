@@ -1,0 +1,150 @@
+Si un número está dentro de comillas dobles JavaScript 
+lo reconoce como String.
+<script>
+    document.write ("29"); 
+</script>
+
+Si un número no lleva las comillas dobles JavaScript
+lo tomará como un digito para realizar operaciones matemáticas
+<script>
+    document.write (29); 
+</script>
+
+Concatenación
+<script>
+    document.write ("2" + "9"); 
+</script>
+
+Suma
+<script>
+    document.write (14+15); 
+</script>
+
+¿Cuál de las siguientes opciones exhibe en la pantalla 
+el número 182?
+<meta charset="UTF-8">
+<script>
+    document.write("18" + "2");
+</script>
+
+Si observas, estamos usando el operador de suma 
+envolviendo dos textos (dos strings). 
+En este caso, JavaScript irá a concatenar, 
+o sea, juntar el texto antes del + 
+con el texto que viene después. 
+Por eso el resultado final es “182” 
+que será pasado para document.write como parámetro. 
+Es bueno recordar que JavaScript primero evalúa la operación 
+(suma) antes de pasar para los () de la instrucción.
+
+Priorización de operaciones matemáticas
+<script>
+    document.write (20+25+15/3);
+    document.write ("la suma de las edades de Juan, Pedro y Carlos es...." + 20+25+15); 
+</script>
+
+<script>
+    document.write ((20+25+15)/3); 
+    document.write ("la suma de las edades de Juan, Pedro y Carlos es...." + (20+25+15));
+</script>
+
+
+Entendiendo dos mundos. 
+<meta charset="UTF-8">
+<script>
+    document.write("Estoy escribiendo desde el mundo JavaScript en el mundo HTML");
+</script>
+
+Observa, en la instrucción document.write está entre () 
+el texto: "Estoy escribiendo desde el mundo JavaScript 
+en el mundo HTML". 
+Cuando usamos document.write, dentro del script, 
+en realidad estamos escribiendo en el mundo HTML, 
+es decir, lo que veremos es un resultado HTML.
+
+Para los que están comenzando, puede parecer extraño, 
+ya que podemos hacer lo mismo escribiendo 
+el texto directamente en el mundo HTML 
+como en el siguiente ejemplo:
+
+<meta charset="UTF-8">
+Estoy escribiendo desde el mundo JavaScript en el mundo HTML
+<script>
+
+</script>
+
+Recuerda que todo lo que esté entre las etiquetas 
+<script> y </script> es considerado por el navegador 
+como código JavaScript y todo lo que está fuera 
+de las etiquetas, no importa en qué lugar, es código HTML. 
+Un ejemplo más:
+
+<meta charset="UTF-8">
+Estoy escribiendo desde el mundo JavaScript en el mundo HTML
+<script>
+
+</script>
+Aquí también estamos en el mundo HTML, porque está fuera de la etiqueta script
+
+
+La ventaja es que con el document.write 
+podemos pasar al resultado de un cálculo 
+y, entre otras cosas, de manera dinámica 
+ya que el mundo HTML no es capaz 
+de realizar operaciones matemáticas.
+
+De este modo, podemos hacer lo siguiente:
+
+<meta charset="UTF-8">
+<script>
+    document.write(10 + 20);
+</script>
+
+En este caso, el document.write recibe dentro de () 
+el resultado de la operación que es 30. 
+El document.write permite conectar con HTML 
+y presentar en el mundo HTML cualquier cosa que deseemos. 
+Lo que estamos pasando para HTML puede ser 
+el resultado de una lógica de programación más complicada. 
+¿Quieres una prueba más de que el document.write 
+pertenece al mundo JavaScript 
+y que se puede escribir en el mundo HTML? 
+Veamos un ejemplo más:
+
+<meta charset="UTF-8">
+<script>
+    document.write("<h1>Sea bienvenido</h1>");
+</script>
+
+Observa que estamos escribiendo en el mundo JavaScript 
+y pasando al mundo HTML el texto 
+"<h1>Sea bienvenido</h1>". 
+Si este código forma parte del mundo HTML, 
+el navegador va a interpretarlo como HTML 
+y va a colocar el texto resaltado, 
+pues estamos usando la etiqueta <h1>. 
+El resultado sería el mismo que si hubiésemos escrito 
+directamente en el mundo HTML:
+
+<meta charset="UTF-8">
+<h1>Sea bienvenido</h1>
+<script>
+</script>
+
+Finalmente, no es posible 
+escribir instrucciones de JavaScript en el mundo HTML:
+
+<meta charset="UTF-8">
+document.write("Sea bienvenido");
+<script>
+</script>
+
+HTML no entiende que debe mostrar el texto 
+pasado por la instrucción, tan solo imprime la instrucción 
+y no su resultado. Así que presta mucha atención 
+cada vez que escribas tu código.
+
+"Lo que aprendimos"
+Convenios y buenas prácticas de programación
+A conectar cartacters (strings)
+Operaciones conjuntas entre textos y números

@@ -1,0 +1,6 @@
+Lo que aprendimos 
+
+A usar variables para reducir código.
+Secuencia de la ejecución de nuestro código.
+Diferentes tipos de datos en las variables y fórmulas.
+Buenas prácticas de programación: Nomenclatura de variables.
