@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4</title>
+</head>
+<body>
+    
+
+<!-- Hagamos algunos ajustes basados en el código anterior.
+
+1.- ¡Altera la función saltarLinea para que salte cinco líneas! Es decir, hacer cinco <br>s.
+
+2.- Realiza una etiqueta HTML, será bastante útil para separar un resultado de otro:<hr>. 
+Altera la función saltarLinea() para que esta escriba en el navegador un <hr> después del tercer <br> que ya hicimos.
+
+3.- La fuente de nuestro programa puede que aún no sea la adecuada. Hay una etiqueta HTML que se llama <big>. 
+Haz que la función imprimir coloque la frase entre <big> y </big>.
+
+4.- ¿Qué pasa si te olvidas la palabra function a la hora de declarar una de las funciones? 
+¿Y los paréntesis en la declaración de la función saltarLinea? -->
+
+
+<script>
+
+    function lineBreak() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function print(yourText) {
+
+        document.write(yourText);
+        lineBreak();
+
+    }
+
+    var year = 2025;
+
+        print("hola amigos");
+
+        // este código calcula las edades de Juan, Pedro y Carlos
+
+        print("Juan tiene: " + (year - 2000) + " años");
+
+        print("Pedro tiene: " + (year - 1995) + " años");
+
+        year = 2030
+
+        print("Carlos tiene: " + (year - 2005) + " años");
+
+</script>
+
+</body>
+</html>

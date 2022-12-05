@@ -1,0 +1,6 @@
+Lo que aprendimos. 
+
+A crear funciones.
+Usar la consola de desarrollador para identificar errores y acompañar las variables.
+Buenas prácticas de programación: Nomenclatura de funciones.
+Funciones con parámetros.
