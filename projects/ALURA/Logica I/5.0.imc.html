@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el IMC</title>
+</head>
+
+<body>
+
+    <h1>Programa Para Calcular el Indice de Masa Corporal de los Usuarios.</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        function calculateImc(weight, height) { //no es recomendable agregar tantas ordenes dentro de la función
+
+            //imc = weight / (height * height);
+            //print("El imc calculado de " + name + " es: " + imc);
+
+            //imc1 = weight1 / (height1 * height1);
+            //imc2 = weight2 / (height2 * height2);
+            //print("El promedio del imc calculado de " + name1 + " y "  + name2 + " es: " + (imc1+imc2)/2);
+
+            //explorando a fondo el retorno de funciones
+            return (weight / (height * height));
+
+        }
+
+        //calculando el imc aplicando la formula y los datos de manera indivual.
+        weightHector = 109
+        heightHector = 1.76
+        imcHector = weightHector / (heightHector * heightHector)
+
+        print("El imc calculado de Héctor es " + imcHector);
+
+        weightLidia = 53
+        heightLidia = 1.53
+        imcLidia = weightLidia / (heightLidia * heightLidia);
+
+        print("El imc calculado de Lidia es " + imcLidia);
+
+        //calculando el imc aplicando la formula y los datos de manera automatizada mediante el llamdo de la función. 
+        //calculateImc(109,1.76,"Héctor")
+
+        //calculateImc(109,1.76,"Héctor",54,1.53,"Lidia");
+
+        print("El promedio del imc calculado de Héctor y Lidia es: " + (calculateImc(109,1.76)+calculateImc(54,1.53))/2);
+
+    </script>
+
+</body>
+
+</html>

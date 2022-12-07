@@ -1,0 +1,4 @@
+Lo que aprendimos
+
+Creamos un programa para calcular IMC.
+Profundizamos en el retorno de funciones.

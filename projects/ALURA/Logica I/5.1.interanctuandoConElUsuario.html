@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+
+<body>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        function calculateImc(weight, height) {
+
+            return (weight / (height * height));
+
+        }
+
+        name = prompt("Ingrese su nombre")
+        typedWeight = prompt(name + ", Ingrese su peso.")
+        typedHeight = prompt(name + ", Ingrese su altura.")
+
+        calculatedImc = calculateImc(typedWeight,typedHeight)
+
+        print(name + ", Su imc es: " + calculatedImc);
+
+    </script>
+
+</body>
+
+</html>

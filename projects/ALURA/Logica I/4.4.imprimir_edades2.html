@@ -17,7 +17,7 @@
 Altera la función saltarLinea() para que esta escriba en el navegador un <hr> después del tercer <br> que ya hicimos.
 
 3.- La fuente de nuestro programa puede que aún no sea la adecuada. Hay una etiqueta HTML que se llama <big>. 
-Haz que la función imprimir coloque la frase entre <big> y </big>.
+Haz que la función imprimir coloque la frase entre <big>  y </big>.
 
 4.- ¿Qué pasa si te olvidas la palabra function a la hora de declarar una de las funciones? 
 ¿Y los paréntesis en la declaración de la función saltarLinea? -->
@@ -30,12 +30,14 @@ Haz que la función imprimir coloque la frase entre <big> y </big>.
         document.write("<br>");
         document.write("<br>");
         document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
 
     }
 
     function print(yourText) {
 
-        document.write(yourText);
+        document.write("<big>" + yourText + "</big>");
         lineBreak();
 
     }
