@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío</title>
+</head>
+
+<body>
+
+    <h1>Programa Adivinar Número Aleatorio</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        function lottery(n) {
+
+            return Math.round(Math.random() * n);
+
+        }
+
+        var givenNumber = lottery(10);
+        var acquiredNumber = parseInt(prompt("Por favor ingrese un número"));
+
+        if (givenNumber == acquiredNumber) {
+
+            print("Felicidades!<br>Usted acertó");
+
+        } else {
+
+            if (acquiredNumber > givenNumber ) {
+
+                print("Usted erró, el número pensado era menor que tu número");
+        }
+
+        else {
+
+            print("Usted erró, el número pensado era mayor que tu número");
+
+        }
+
+    }
+
+    </script>
+
+</body>
+
+</html>

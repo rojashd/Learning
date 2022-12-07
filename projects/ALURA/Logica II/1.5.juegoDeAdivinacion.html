@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el IMC 2.0</title>
+</head>
+
+<body>
+
+    <h1>Programa Adivinar Número Aleatorio</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        var givenNumber = Math.round(Math.random()*10); //Esta función nos permite obtener un numero entero entre 0-10, de forma aleatorai, haciendo que nuestro programa sea menos predecible y más inteligente
+        var acquiredNumber = parseInt(prompt("Por favor ingrese un número entre 0 - 10"));
+
+        if (givenNumber == acquiredNumber) {
+
+            print("Felicidades!<br>Usted acertó");
+
+        } else {
+
+            print("Lo siento.<br>El número era " + givenNumber);
+
+        }
+
+        /*En lugar de usar dos condiciones if para establecer un resultado falso y uno verdadero se usa la condicional else para
+        indicarle al programa que haga lo contrario si la primera condición if es falsa*/
+        
+        /*if (givenNumber != acquiredNumber) { 
+
+            print("Lo siento.<br>El número era " + givenNumber);
+
+        }*/
+
+    </script>
+
+</body>
+
+</html>

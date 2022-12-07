@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el IMC 2.0</title>
+</head>
+
+<body>
+
+    <h1>Programa Para Calcular el Indice de Masa Corporal de los Usuarios 2.0</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        function computeImc(weight, height) {
+
+            return (weight / (height * height));
+
+        }
+
+        var name = prompt("Ingrese su nombre");
+        var typedWeight = prompt(name + ", Ingrese su peso.");
+        var typedHeight = prompt(name + ", Ingrese su altura.");
+
+        var computedImc = computeImc(typedWeight, typedHeight);
+
+        print(name + ", Su imc es: " + computedImc);
+
+        if (computedImc < 18.5) {
+
+            print("IMC debajo de lo recomendado");
+
+        }
+
+        if (computedImc >= 18.5) {
+
+            if (computedImc < 25) {
+
+                print("IMC dentro del intervalo normal");
+
+            }
+
+        }
+
+        if (computedImc >= 25) {
+
+            if (computedImc < 30) {
+
+                print("IMC dentro del rango considerado como sobrepeso");
+
+            }
+
+        }
+
+        if (computedImc >= 30) {
+
+            print("IMC dentro del rango considerado como obesidad");
+
+        }
+</script>
+
+</body>
+
+</html>

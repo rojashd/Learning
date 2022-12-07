@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1.3</title>
+</head>
+
+<body>
+    <h1>Programa para calcular los puntos de un equipo de fútbol.</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+
+        var wins = parseInt(prompt("Ingrese la cantidad de partidos ganados"));
+        var draws = parseInt(prompt("Ingrese la cantidad de partidos empatados"));
+
+        var totalPoints = (wins * 3) + draws;
+
+        print("Su equipo tiene un total de " + totalPoints + " puntos ")
+
+        if (totalPoints > 28) {
+
+            print("El equipo está mejor que el torneo pasado");
+
+        }
+
+        if (totalPoints < 28) {
+
+            print("El esquipo está peor que el torneo pasado");
+
+        }
+
+        if (totalPoints == 28) {
+
+            print("El equipo está igual que el torneo pasado");
+
+        }
+
+    </script>
+</body>
+
+</html>

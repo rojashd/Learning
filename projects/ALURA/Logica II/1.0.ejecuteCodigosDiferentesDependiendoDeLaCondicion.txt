@@ -1,0 +1,242 @@
+1.2 Total de invitados a una Fiesta.
+
+Nuestro amigo Jorge creó un programa simple para calcular el total de invitados de su fiesta, 
+el programa tiene que sumar el total de invitados normales con el total de invitados VIPs. 
+Ciertamente podría usar la calculadora, pero le pareció relevante ejercer su conocimiento para diseñar un programa. 
+Entonces, Jorge escribió lo siguiente:
+
+<script>
+function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var invitados = prompt("Número de invitados");
+    var vips = prompt("Número de invitados VIP's");
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);
+</script>
+
+Observa que usa la función prompt() para leer la cantidad de invitados e invitados vips, 
+por lo tanto está realizando la concatenación de dos números leídos por el teclado, no está realizando la suma.
+
+¿Cuál de las opciones de abajo tiene el código correctamente para calcular el total de invitados?
+
+Opción C
+
+¡Correcto! Como la función prompt siempre transforma todo lo que digitamos en el formato del texto, 
+o sea, como un string, es una buena práctica siempre convertir el valor digitado para el numero cuando nuestra intención es leer un número. 
+Analicemos esta instrucción: var invitados = parseInt(prompt("Número de invitados"));
+
+La función prompt retorna lo que digitamos como string y ese retorno es pasado para parseInt. 
+Y es esta función que recibe un string y la convierte en un número. 
+Ahora, como tenemos dos números vinculados, no sucederá más una concatenación, y sí una suma.
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var invitados = parseInt(prompt("Número de invitados"));
+    var vips = parseInt(prompt("Número de invitados VIP's"));
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);
+
+</script>
+
+<---------------------------------------------------------------------------------->
+
+1.3 ¿Será que entra cumpliendo las condiciones?
+
+Tenemos la declaración de la siguiente variable:
+
+var numero = 10;
+
+Ahora, tenemos las siguientes condiciones:
+
+a. if(numero >= 2 && numero < 12) {
+    alert("ENTRÓ!");
+    }
+
+b. if(numero >= 2 &&  < 12) {
+    alert("ENTRÓ!");
+    }
+
+c. if(numero >= 10) {
+    alert("ENTRÓ!");
+    }
+
+¿Cuál de las opciones fueron verdaderas y se mostró la alerta ENTRÓ!?
+
+a y c: ¡Correcto! Ambas cumplen la condición.
+
+<---------------------------------------------------------------------------------->
+
+1.4 La condición if y else
+
+¿Cuál de las opciones de abajo usa correctamente la condición if y else?
+
+Opción b. 
+
+var contrasenha = prompt("Entra con tu contraseña");
+
+if(contrasenha == "micontrasenha123") {
+    alert("Acceso liberado!");
+} else {
+    alert("Acceso negado!");
+}
+
+¡Correcto! La condición if necesita recibir el resultado de una operación lógica dentro de los paréntesis.
+
+if(contrasenha == "micontrasenha123")
+
+Además, es dentro del bloque que indicamos cuáles instrucciones se ejecutarán si la operación lógica fuera true:
+
+if(contrasenha == "micontrasenha123") {
+    alert("Acceso liberado!");    
+}
+
+Observa que tenemos dos llaves que comienzan y finalizan el bloque if. La instrucción else viene justo después del bloque if:
+
+if(contrasenha == "micontrasenha123") {
+    alert("Acceso liberado!");    
+} else
+
+Así como la instrucción if, la instrucción else también tiene su bloque con las instrucciones que deseamos ejecutar si la condición if recibe false:
+
+if(contrasenha == "micontrasenha123") {
+    alert("Acceso liberado!");
+} else {
+    alert("Acceso negado!");
+}
+
+<---------------------------------------------------------------------------------->
+
+1.5 Será que puedo conducir. 
+
+Tenemos el siguiente programa:
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+        if(edad >= 18) {
+        if(tieneLicencia == "S") {
+            imprimir("Puedes conducir");
+        }
+    }
+
+    if(edad < 18) {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+
+Observa que tenemos en el código un if dentro de otro, porque para que alguien pueda conducir, 
+la persona además de tener que ser mayor de edad, debe tener una licencia de conducir. 
+Sin embargo, tener menos de 18 años ya elimina la necesidad de verificar la existencia de una licencia, ya que no puede conducir.
+
+Por lo tanto, podemos mejorar nuestro código, en lugar de poner un if dentro de otro, 
+podemos usar un && para indicar un "Y" dentro del mismo si. Nuestro código quedaría así:
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if((edad >= 18) && (tieneLicencia == "S")) {
+            imprimir("Puedes conducir");
+        }
+
+
+    if(edad < 18) {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+
+¡Podemos mejorar el código aún más! Por ejemplo, solo puede ingresar el if si ambas condiciones (tener una licencia y ser mayor de 18 años) son verdaderas. 
+En este caso, solo hay una condición opuesta a "Puedes conducir" y es "No puedes conducir". Por lo tanto, podemos usar un else.
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if((edad >= 18) && (tieneLicencia == "S")) {
+            imprimir("Puedes conducir");
+        }
+
+    else {
+        imprimir("No puedes conducir");
+    }
+
+</script>
+
+¡Observa que nuestro código se ha vuelto más optimizado y continúa con la misma funcionalidad!
+
+¡No te preocupes si tu respuesta no fue la misma que la mía, si tu programa funcionó, ya ganó 10! Siempre es bueno ver diferentes formas de resolver el mismo problema.
+
+<---------------------------------------------------------------------------------->
+
+1.6 Desafío.
+
+1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, 
+retornando ese valor. De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, 
+escribirás var numeroPensado = sorteo(n);. Realiza esa modificación, creando una nueva función y utilízala de forma correcta.
+
+2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número lanzado era mayor o menor al número pensando por el programa.
+
+
+
+<---------------------------------------------------------------------------------->
+
+Lo que aprendimos. 
+
+1. Convertir string en número usando parseInt.
+2. Trabajar con condiciones if y else.
+3. Usar fórmulas matemáticas como Math.random y Math.round.
