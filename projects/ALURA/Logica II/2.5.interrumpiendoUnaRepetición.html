@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2.5</title>
+</head>
+
+<body>
+
+    <h1>Interrumpiendo una repetición</h1>
+    <h2>Juego de adivinación 2.0</h2>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        var givenNumber = Math.round(Math.random() * 10);
+        var attempts = 3;
+        var counter = 1;
+
+
+        while (counter <= attempts) {
+
+            var acquiredNumber = parseInt(prompt("Por favor ingrese un número entre 0 - 10"));
+
+            if (givenNumber == acquiredNumber) {
+
+                alert("Felicidades usted acertó en el intento " + counter + " El número era " + givenNumber + " ! ");
+                break;
+
+            } else {
+
+                alert("Lo siento. Usted ha fallado");
+
+            }
+
+            counter++;
+
+        }
+
+            if (givenNumber == acquiredNumber) {
+
+                print("Felicidades!<br>Usted acertó, el número era<br> " + givenNumber);
+
+            } else {
+
+                print("Lo siento.<br>El número era " + givenNumber);
+
+            }
+
+            print("Fin.");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2.7</title>
+</head>
+
+<body>
+
+    <h1>Simulando un inicio de sesión</h1>
+
+    <script>
+
+        /*Es común que los programas tengan una pantalla de inicio de sesión, es decir, la pantalla que identifica al usuario en el sistema. 
+        Para permitir el acceso, el nombre de usuario y la contraseña deben coincidir con los valores almacenados por la aplicación, 
+        independientemente de dónde se guardó la información. 
+        Tampoco es raro permitir un máximo de tres intentos y después del tercero, el sistema se niega a identificar al usuario 
+        y notifica al administrador del sistema o incluso al propietario de la cuenta.
+        Aquí está el código que inicia sesión, pero ATENCIÓN, solo le da una oportunidad al usuario:*/
+
+        var inicioDeSesionRegistrado = "alura";
+        var contrasenhaRegistrada = "alura321";
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+
+    </script>
+
+</body>
+
+</html>

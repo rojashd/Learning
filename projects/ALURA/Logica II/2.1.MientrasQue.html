@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2.1</title>
+</head>
+
+<body>
+
+    <h1>Programa para calculas los años en que hubo mundial de fútbol de la FIFA</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        var wcYear = 1930;
+        var givenYear = parseInt(prompt("Ingrese un año limite para calcular"));
+
+        /*Funciona pero no es eficiente, se tendría que repetir manualmente la linea de codigo que realiza el calculo del si hubo o no mundios 
+        en es año, para solucionarlo se recomienda usar un ciclo while*/
+        
+        /*print("En el año " + wcYear + " hubo mundial de fútbol de la FIFA");
+
+        wcYear = wcYear + 4;
+        
+        print("En el año " + wcYear + " hubo mundial de fútbol de la FIFA");*/
+
+        while(wcYear <= givenYear) {
+
+            print("En el año " + wcYear + " hubo mundial de fútbol de la FIFA");
+            wcYear = wcYear + 4;
+
+        }
+
+        print("Fin");
+
+    </script>
+
+</body>
+
+</html>

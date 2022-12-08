@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2.2</title>
+</head>
+
+<body>
+
+    <h1>Tablas de multiplicar</h1>
+
+    <script>
+
+        function lineBreak() {
+
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function print(yourText) {
+
+            document.write(yourText);
+            lineBreak();
+
+        }
+
+        var multiplier = 1; 
+
+        print("Multiplicando con el ciclo 'while'");
+
+        while(multiplier <= 10) {
+
+            print(5 *  multiplier);
+
+            multiplier = multiplier + 1;
+
+        }
+
+        print("Multiplicando con el ciclo 'for'")
+
+        for (var multiplier = 1; multiplier <= 10; multiplier++) {
+            
+            print(6 * multiplier);
+
+        }
+
+        print("Fin");
+
+    </script>
+
+</body>
+
+</html>
