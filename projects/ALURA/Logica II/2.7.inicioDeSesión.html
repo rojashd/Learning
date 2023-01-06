@@ -19,21 +19,61 @@
         independientemente de dónde se guardó la información. 
         Tampoco es raro permitir un máximo de tres intentos y después del tercero, el sistema se niega a identificar al usuario 
         y notifica al administrador del sistema o incluso al propietario de la cuenta.
-        Aquí está el código que inicia sesión, pero ATENCIÓN, solo le da una oportunidad al usuario:*/
+        Aquí está el código que inicia sesión, pero ATENCIÓN, solo le da una oportunidad al usuario:
+        Cambia el código para que el usuario tenga 3 intentos de inicio de sesión. Atención: si lo hace bien en el primer intento, no tiene sentido seguir preguntando por su nombre de usuario y contraseña.*/
 
+        /*var intentoActual = 1;
+        var intentosMaximos = 3;
         var inicioDeSesionRegistrado = "alura";
         var contrasenhaRegistrada = "alura321";
 
+        while (intentoActual <= intentosMaximos){
+
+            var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+            var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+            if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+                alert ("Bienvenido al sistema" + inicioDeSesionIngresado);
+                intentoActual = intentosMaximos; //Intento exitoso, salgo del ciclo y mi contador aumenta en +1
+            } else{
+                if (intentoActual == 3){
+                    alert("Se exedió el número de intentos permitidos!");
+                } else {
+                    alert("Ususario o Contraseña inválidos. Intente nuevamente");
+                }
+            }
+            //Inicio del próximo intento 
+            intentoActual = intentoActual +1 
+        }*/
+
+
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var maximoIntentos = 3;
+    var intentoActual = 1;
+
+    while(intentoActual <= maximoIntentos){
         var inicioDeSesionIngresado = prompt("Ingrese su usuario");
         var contrasenhaIngresada = prompt("Ingrese su contraseña");
 
-        if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
-            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+            alert("Bienvenido al sistema" + inicioDeSesionIngresado);
+            intentoActual = maximoIntentos; // Lo hice bien, así que paso todos los intentos que falten y salgo del loop. Allá abajo aumentará +1! 
         } else {
-            alert("inicio de sesión inválido. Favor intente de nuevo");
+            if (intentoActual == 3) {
+                alert("Agotaste el número permitido de intentos!");
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+            }
         }
 
-    </script>
+       // vaya al próximo intento 
+        intentoActual = intentoActual +1  
+    }
+
+</script>
 
 </body>
 
